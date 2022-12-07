@@ -3,7 +3,7 @@ $couleurPrimaire: #9356DC;
 $couleurSecondaire: #FF79DA;
 $couleurTertiaire: #99E2D0;
 $couleurFond: #F6F6F6;
-$ombre: 0 3px 10px 0;
+$ombre: 0 3px 10px rgb(0 0 0 / 20%);
 /* loader */
 
 body {
@@ -16,8 +16,94 @@ body {
     right: 0;
 }
 
+
+
+.chargement {
+    border-radius: 5px;
+    margin: auto 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    opacity: 0.9;
+    z-index: 5;
+    animation: loader;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.chargement__bord::before,
+.chargement__bord::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid transparent;
+}
+
+.chargement__bord::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: $couleurSecondaire;
+    animation: rotation 3s linear infinite;
+}
+
+.chargement__bord::after {
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: $couleurTertiaire;
+    animation: rotation 1.5s linear infinite;
+}
+
+.chargement__bord {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color: $couleurPrimaire;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes loader {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
 h1 {
     font-family: Shrikhand;
+}
+
+h2 {
+    font-size: 28px;
 }
 
 button {
@@ -30,6 +116,7 @@ button {
     align-self: center;
     box-shadow: $ombre;
     margin: 32px;
+    cursor: pointer;
 
     &:hover {
         background: linear-gradient(176deg, lighten($couleurSecondaire, 15%) 0%, lighten($couleurPrimaire, 15%) 100%);
@@ -46,10 +133,15 @@ header {
     .headerImg {
         width: auto;
         text-align: center;
-        /* box-shadow: $ombre;*/
+        vertical-align: middle;
+        box-shadow: $ombre;
+        z-index: 1;
+        height: auto;
+        padding: 16px 0 16px 0;
+        position: relative;
 
-        img {
-            margin: 24px;
+        h1 {
+            margin: 0;
         }
 
     }
@@ -61,7 +153,7 @@ header {
         flex-direction: row;
         justify-content: center;
         background-color: darken($couleurFond, 5%);
-
+        z-index: 0;
         padding: 16px;
 
         i {
@@ -78,12 +170,20 @@ header {
         margin: 0;
         padding: 24px;
         background-color: $couleurFond;
+
+        p {
+            font-size: 18px;
+        }
     }
 }
 
 .fonctionnement {
     width: 100%;
-    margin: 64px 0 64px 0;
+    margin: 48px 0 48px 0;
+
+    h2 {
+        margin-left: 16px;
+    }
 
     ul {
         width: auto;
@@ -123,7 +223,7 @@ header {
             padding: 16px;
             border-radius: 24px;
             width: 90%;
-            /*  box-shadow: $ombre;*/
+            box-shadow: $ombre;
             margin-left: 8px;
             text-overflow: hidden;
             text-overflow: ellipsis;
@@ -149,6 +249,11 @@ header {
     width: auto;
     margin: 0;
 
+    h2 {
+        margin-left: 16px;
+    }
+
+
     .conteneurFicheRestaurant {
         display: flex;
         flex-direction: row;
@@ -163,7 +268,8 @@ header {
             background-color: #ffffff;
             margin: 12px;
             border-radius: 24px;
-            height: 240px;
+            /* height: 240px;*/
+            height: 200px;
             gap: 0px;
             width: 46%;
             overflow: hidden;
@@ -216,7 +322,8 @@ header {
             }
 
             img {
-                height: 230px;
+                /*height: 230px;*/
+                height: 190px;
                 width: 100%;
 
                 object-fit: cover;
@@ -459,20 +566,20 @@ header {
 }
 
 footer {
-    align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: #353535;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
 
-    img {
-        width: 128px;
-        margin: 16px 0 16px 0;
-        filter: invert(100%);
+    h2 {
+        text-align: center;
+        font-family: Shrikhand;
+        color: #FFFFFF;
     }
+
 
     ul {
         display: flex;
@@ -481,13 +588,14 @@ footer {
         text-align: left;
         gap: 10%;
         width: 80%;
-        margin: 0;
+        margin: 0 0 48px 0;
         padding: 0;
 
         li {
             color: #FFFFFF;
             list-style-type: none;
             width: 25%;
+            margin: 4px 0 4px 0;
 
 
             a {
@@ -505,16 +613,17 @@ footer {
 
 @media screen and (max-width: 992px) {
     .fonctionnement {
+
         ul {
             flex-direction: column;
             margin: 0;
 
-
             li {
                 width: 92%;
 
+
                 .etiquetteFonctionnement {
-                    margin: 0;
+                    margin: 0 16px 0 0;
                     width: 100%;
 
                 }
@@ -545,6 +654,8 @@ footer {
         }
     }
 
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -565,12 +676,19 @@ footer {
         margin: 0;
         height: auto;
 
+        h2 {
+            text-align: left;
+            margin-left: 16px;
+        }
+
         ul {
             display: flex;
             flex-direction: column;
+            margin-left: 16px;
 
             li {
                 width: 82%;
+
             }
         }
 
