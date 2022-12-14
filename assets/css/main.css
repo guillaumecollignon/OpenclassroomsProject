@@ -11,8 +11,89 @@ body {
   right: 0;
 }
 
-.chargement {
-  border-radius: 5px;
+.fondu1 {
+  -webkit-animation: fadeinBottom 400ms;
+          animation: fadeinBottom 400ms;
+}
+
+.fondu2 {
+  -webkit-animation: fadeinBottom 800ms;
+          animation: fadeinBottom 800ms;
+}
+
+.fondu3 {
+  -webkit-animation: fadeinBottom 1200ms;
+          animation: fadeinBottom 1200ms;
+}
+
+.fondu4 {
+  -webkit-animation: fadeinBottom 1600ms;
+          animation: fadeinBottom 1600ms;
+}
+
+.fondu5 {
+  -webkit-animation: fadeinBottom 2000ms;
+          animation: fadeinBottom 2000ms;
+}
+
+.fondu6 {
+  -webkit-animation: fadeinBottom 2400ms;
+          animation: fadeinBottom 2400ms;
+}
+
+.fondu7 {
+  -webkit-animation: fadeinBottom 2800ms;
+          animation: fadeinBottom 2800ms;
+}
+
+.fondu8 {
+  -webkit-animation: fadeinBottom 3200ms;
+          animation: fadeinBottom 3200ms;
+}
+
+.fondu9 {
+  -webkit-animation: fadeinBottom 3600ms;
+          animation: fadeinBottom 3600ms;
+}
+
+.fondu10 {
+  -webkit-animation: fadeinBottom 4000ms;
+          animation: fadeinBottom 4000ms;
+}
+
+.fondu11 {
+  -webkit-animation: fadeinBottom 4400ms;
+          animation: fadeinBottom 4400ms;
+}
+
+.fondu12 {
+  -webkit-animation: fadeinBottom 4800ms;
+          animation: fadeinBottom 4800ms;
+}
+
+.fondu13 {
+  -webkit-animation: fadeinBottom 5200ms;
+          animation: fadeinBottom 5200ms;
+}
+
+@-webkit-keyframes fadeinBottom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinBottom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader {
   margin: auto 0;
   width: 100%;
   height: 100%;
@@ -31,15 +112,15 @@ body {
           animation-fill-mode: forwards;
 }
 
-.chargement__bord::before,
-.chargement__bord::after {
+.loader__bordure::before,
+.loader__bordure::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   border: 7px solid transparent;
 }
 
-.chargement__bord::before {
+.loader__bordure::before {
   top: 10px;
   left: 10px;
   right: 10px;
@@ -49,7 +130,7 @@ body {
           animation: rotation 3s linear infinite;
 }
 
-.chargement__bord::after {
+.loader__bordure::after {
   top: 25px;
   left: 25px;
   right: 25px;
@@ -59,7 +140,7 @@ body {
           animation: rotation 1.5s linear infinite;
 }
 
-.chargement__bord {
+.loader__bordure {
   display: block;
   position: relative;
   width: 100px;
@@ -126,7 +207,6 @@ button {
   align-self: center;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   margin: 32px;
-  cursor: pointer;
 }
 button:hover {
   background: linear-gradient(176deg, #ffc6ef 0%, #bc95e9 100%);
@@ -327,7 +407,7 @@ header .headerExp p {
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre h4 {
   font-weight: normal;
 }
-.restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre span {
+.restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre .nomRestaurant {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
@@ -354,10 +434,14 @@ header .headerExp p {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .menuHeader .navMenu h1 {
-  width: 80%;
+  width: calc(100% - 16px);
+  text-align: center;
 }
 .menuHeader .navMenu .fa-arrow-left {
   font-size: 28px;
+  margin-left: 16px;
+  color: #000000;
+  text-decoration: none;
 }
 .menuHeader .bannière {
   width: 100%;
@@ -397,6 +481,7 @@ header .headerExp p {
 }
 .menuSection .menuTitre h2 {
   font-family: Shrikhand;
+  font-size: 24px;
   text-align: left;
 }
 .menuSection .menuTitre .fa-stack {
@@ -500,6 +585,7 @@ footer {
   background-color: #353535;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-content: center;
 }
 footer h2 {
@@ -511,9 +597,8 @@ footer ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  text-align: left;
-  gap: 10%;
-  width: 80%;
+  /*gap: 8px;*/
+  width: 100%;
   margin: 0 0 48px 0;
   padding: 0;
 }
@@ -522,6 +607,7 @@ footer ul li {
   list-style-type: none;
   width: 25%;
   margin: 4px 0 4px 0;
+  text-align: center;
 }
 footer ul li a {
   text-decoration: none;
@@ -532,6 +618,9 @@ footer ul li i {
 }
 
 @media screen and (max-width: 992px) {
+  button:active {
+    background: linear-gradient(176deg, #ffc6ef 0%, #bc95e9 100%);
+  }
   .fonctionnement ul {
     flex-direction: column;
     margin: 0;
@@ -542,6 +631,18 @@ footer ul li i {
   .fonctionnement ul li .etiquetteFonctionnement {
     margin: 0 16px 0 0;
     width: 100%;
+  }
+  .fonctionnement ul li .etiquetteFonctionnement:active {
+    background-color: #f2eafb;
+  }
+  .fonctionnement ul li .etiquetteFonctionnement:active i {
+    color: #9356DC;
+  }
+  .fa-stack .vide:active {
+    opacity: 0;
+  }
+  .fa-stack .plein:active {
+    color: #FF79DA;
   }
   .menuSection .menuCarte .sousMenuCarte {
     display: flex;
@@ -558,14 +659,26 @@ footer ul li i {
   .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox {
     width: calc(100% - 32px);
   }
+  .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuPlat {
+    width: calc(100% - 8rem);
+  }
+  .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuI {
+    margin-right: 0;
+  }
+  .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuI i {
+    transform: rotate(360deg);
+  }
 }
 @media screen and (max-width: 768px) {
   .restaurant .conteneurFicheRestaurant .ficheRestaurant {
     width: 100%;
   }
   footer {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     justify-content: left;
+    align-content: center;
     margin: 0;
     height: auto;
   }
@@ -576,86 +689,11 @@ footer ul li i {
   footer ul {
     display: flex;
     flex-direction: column;
+    width: 90%;
     margin-left: 16px;
   }
   footer ul li {
     width: 82%;
-  }
-}
-.fondu1 {
-  -webkit-animation: fadeinBottom 400ms;
-          animation: fadeinBottom 400ms;
-}
-
-.fondu2 {
-  -webkit-animation: fadeinBottom 800ms;
-          animation: fadeinBottom 800ms;
-}
-
-.fondu3 {
-  -webkit-animation: fadeinBottom 1200ms;
-          animation: fadeinBottom 1200ms;
-}
-
-.fondu4 {
-  -webkit-animation: fadeinBottom 1600ms;
-          animation: fadeinBottom 1600ms;
-}
-
-.fondu5 {
-  -webkit-animation: fadeinBottom 2000ms;
-          animation: fadeinBottom 2000ms;
-}
-
-.fondu6 {
-  -webkit-animation: fadeinBottom 2400ms;
-          animation: fadeinBottom 2400ms;
-}
-
-.fondu7 {
-  -webkit-animation: fadeinBottom 2800ms;
-          animation: fadeinBottom 2800ms;
-}
-
-.fondu8 {
-  -webkit-animation: fadeinBottom 3200ms;
-          animation: fadeinBottom 3200ms;
-}
-
-.fondu9 {
-  -webkit-animation: fadeinBottom 3600ms;
-          animation: fadeinBottom 3600ms;
-}
-
-.fondu10 {
-  -webkit-animation: fadeinBottom 4000ms;
-          animation: fadeinBottom 4000ms;
-}
-
-.fondu11 {
-  -webkit-animation: fadeinBottom 4400ms;
-          animation: fadeinBottom 4400ms;
-}
-
-.fondu12 {
-  -webkit-animation: fadeinBottom 4800ms;
-          animation: fadeinBottom 4800ms;
-}
-
-@-webkit-keyframes fadeinBottom {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeinBottom {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    text-align: left;
   }
 }/*# sourceMappingURL=main.css.map */

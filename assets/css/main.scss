@@ -16,10 +16,95 @@ body {
     right: 0;
 }
 
+.fondu1 {
 
+    animation: fadeinBottom 400ms;
 
-.chargement {
-    border-radius: 5px;
+}
+
+.fondu2 {
+
+    animation: fadeinBottom 800ms;
+
+}
+
+.fondu3 {
+
+    animation: fadeinBottom 1200ms;
+
+}
+
+.fondu4 {
+
+    animation: fadeinBottom 1600ms;
+
+}
+
+.fondu5 {
+
+    animation: fadeinBottom 2000ms;
+
+}
+
+.fondu6 {
+
+    animation: fadeinBottom 2400ms;
+
+}
+
+.fondu7 {
+
+    animation: fadeinBottom 2800ms;
+
+}
+
+.fondu8 {
+
+    animation: fadeinBottom 3200ms;
+
+}
+
+.fondu9 {
+
+    animation: fadeinBottom 3600ms;
+
+}
+
+.fondu10 {
+
+    animation: fadeinBottom 4000ms;
+
+}
+
+.fondu11 {
+
+    animation: fadeinBottom 4400ms;
+
+}
+
+.fondu12 {
+
+    animation: fadeinBottom 4800ms;
+
+}
+
+.fondu13 {
+
+    animation: fadeinBottom 5200ms;
+
+}
+
+@keyframes fadeinBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.loader {
     margin: auto 0;
     width: 100%;
     height: 100%;
@@ -35,15 +120,15 @@ body {
     animation-fill-mode: forwards;
 }
 
-.chargement__bord::before,
-.chargement__bord::after {
+.loader__bordure::before,
+.loader__bordure::after {
     content: "";
     position: absolute;
     border-radius: 50%;
     border: 7px solid transparent;
 }
 
-.chargement__bord::before {
+.loader__bordure::before {
     top: 10px;
     left: 10px;
     right: 10px;
@@ -52,7 +137,7 @@ body {
     animation: rotation 3s linear infinite;
 }
 
-.chargement__bord::after {
+.loader__bordure::after {
     top: 25px;
     left: 25px;
     right: 25px;
@@ -61,7 +146,7 @@ body {
     animation: rotation 1.5s linear infinite;
 }
 
-.chargement__bord {
+.loader__bordure {
     display: block;
     position: relative;
     width: 100px;
@@ -116,7 +201,7 @@ button {
     align-self: center;
     box-shadow: $ombre;
     margin: 32px;
-    cursor: pointer;
+
 
     &:hover {
         background: linear-gradient(176deg, lighten($couleurSecondaire, 15%) 0%, lighten($couleurPrimaire, 15%) 100%);
@@ -251,6 +336,7 @@ header {
 
     h2 {
         margin-left: 16px;
+
     }
 
 
@@ -348,7 +434,7 @@ header {
                     font-weight: normal;
                 }
 
-                span {
+                .nomRestaurant {
                     display: flex;
                     flex-direction: column;
                     margin-left: 16px;
@@ -385,11 +471,16 @@ header {
 
 
         h1 {
-            width: 80%;
+            width: calc(100% - 16px);
+            text-align: center;
+
         }
 
         .fa-arrow-left {
             font-size: 28px;
+            margin-left: 16px;
+            color: #000000;
+            text-decoration: none;
 
         }
     }
@@ -435,6 +526,7 @@ header {
 
         h2 {
             font-family: Shrikhand;
+            font-size: 24px;
             text-align: left;
         }
 
@@ -572,6 +664,7 @@ footer {
     background-color: #353535;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-content: center;
 
     h2 {
@@ -585,9 +678,9 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        text-align: left;
-        gap: 10%;
-        width: 80%;
+
+        /*gap: 8px;*/
+        width: 100%;
         margin: 0 0 48px 0;
         padding: 0;
 
@@ -596,6 +689,7 @@ footer {
             list-style-type: none;
             width: 25%;
             margin: 4px 0 4px 0;
+            text-align: center;
 
 
             a {
@@ -612,6 +706,13 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+    button {
+
+        &:active {
+            background: linear-gradient(176deg, lighten($couleurSecondaire, 15%) 0%, lighten($couleurPrimaire, 15%) 100%);
+        }
+    }
+
     .fonctionnement {
 
         ul {
@@ -626,7 +727,32 @@ footer {
                     margin: 0 16px 0 0;
                     width: 100%;
 
+                    &:active {
+                        background-color: lighten($couleurPrimaire, 35%);
+
+                        i {
+                            color: $couleurPrimaire;
+                        }
+                    }
+
                 }
+            }
+        }
+    }
+
+    .fa-stack {
+
+        .vide {
+
+            &:active {
+                opacity: 0;
+            }
+        }
+
+        .plein {
+
+            &:active {
+                color: $couleurSecondaire;
             }
         }
     }
@@ -648,6 +774,23 @@ footer {
 
                     .cheakBox {
                         width: calc(100% - 32px);
+
+                        &:active {
+                            .menuPlat {
+                                width: calc(100% - 8rem);
+
+
+                            }
+
+                            .menuI {
+                                margin-right: 0;
+
+
+                                i {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -659,6 +802,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
     .restaurant {
         .conteneurFicheRestaurant {
 
@@ -671,8 +815,11 @@ footer {
     }
 
     footer {
+        display: flex;
+        flex-direction: column;
         text-align: left;
         justify-content: left;
+        align-content: center;
         margin: 0;
         height: auto;
 
@@ -684,95 +831,15 @@ footer {
         ul {
             display: flex;
             flex-direction: column;
+            width: 90%;
             margin-left: 16px;
 
             li {
                 width: 82%;
+                text-align: left;
 
             }
         }
 
-    }
-}
-
-.fondu1 {
-
-    animation: fadeinBottom 400ms;
-
-}
-
-.fondu2 {
-
-    animation: fadeinBottom 800ms;
-
-}
-
-.fondu3 {
-
-    animation: fadeinBottom 1200ms;
-
-}
-
-.fondu4 {
-
-    animation: fadeinBottom 1600ms;
-
-}
-
-.fondu5 {
-
-    animation: fadeinBottom 2000ms;
-
-}
-
-.fondu6 {
-
-    animation: fadeinBottom 2400ms;
-
-}
-
-.fondu7 {
-
-    animation: fadeinBottom 2800ms;
-
-}
-
-.fondu8 {
-
-    animation: fadeinBottom 3200ms;
-
-}
-
-.fondu9 {
-
-    animation: fadeinBottom 3600ms;
-
-}
-
-.fondu10 {
-
-    animation: fadeinBottom 4000ms;
-
-}
-
-.fondu11 {
-
-    animation: fadeinBottom 4400ms;
-
-}
-
-.fondu12 {
-
-    animation: fadeinBottom 4800ms;
-
-}
-
-@keyframes fadeinBottom {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
