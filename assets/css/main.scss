@@ -313,6 +313,10 @@ header {
             text-overflow: hidden;
             text-overflow: ellipsis;
 
+            i {
+                color: gray;
+            }
+
             &:hover {
                 background-color: lighten($couleurPrimaire, 35%);
 
@@ -368,13 +372,16 @@ header {
                 right: 1%;
                 bottom: 5%;
 
+
                 .vide {
                     color: #000000;
                     opacity: 1;
                     transition: opacity 400ms;
+                    z-index: 4;
 
                     &:hover {
                         opacity: 0;
+                        z-index: 3;
                     }
                 }
 
@@ -383,9 +390,11 @@ header {
 
                     color: #ffffff;
                     transition: color 400ms;
+                    z-index: 3;
 
                     &:hover {
                         color: $couleurSecondaire;
+                        z-index: 4;
                     }
                 }
             }

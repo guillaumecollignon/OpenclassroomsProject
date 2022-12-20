@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* variables */
 /* loader */
 body {
@@ -13,73 +14,74 @@ body {
 
 .fondu1 {
   -webkit-animation: fadeinBottom 400ms;
-          animation: fadeinBottom 400ms;
+  animation: fadeinBottom 400ms;
 }
 
 .fondu2 {
   -webkit-animation: fadeinBottom 800ms;
-          animation: fadeinBottom 800ms;
+  animation: fadeinBottom 800ms;
 }
 
 .fondu3 {
   -webkit-animation: fadeinBottom 1200ms;
-          animation: fadeinBottom 1200ms;
+  animation: fadeinBottom 1200ms;
 }
 
 .fondu4 {
   -webkit-animation: fadeinBottom 1600ms;
-          animation: fadeinBottom 1600ms;
+  animation: fadeinBottom 1600ms;
 }
 
 .fondu5 {
   -webkit-animation: fadeinBottom 2000ms;
-          animation: fadeinBottom 2000ms;
+  animation: fadeinBottom 2000ms;
 }
 
 .fondu6 {
   -webkit-animation: fadeinBottom 2400ms;
-          animation: fadeinBottom 2400ms;
+  animation: fadeinBottom 2400ms;
 }
 
 .fondu7 {
   -webkit-animation: fadeinBottom 2800ms;
-          animation: fadeinBottom 2800ms;
+  animation: fadeinBottom 2800ms;
 }
 
 .fondu8 {
   -webkit-animation: fadeinBottom 3200ms;
-          animation: fadeinBottom 3200ms;
+  animation: fadeinBottom 3200ms;
 }
 
 .fondu9 {
   -webkit-animation: fadeinBottom 3600ms;
-          animation: fadeinBottom 3600ms;
+  animation: fadeinBottom 3600ms;
 }
 
 .fondu10 {
   -webkit-animation: fadeinBottom 4000ms;
-          animation: fadeinBottom 4000ms;
+  animation: fadeinBottom 4000ms;
 }
 
 .fondu11 {
   -webkit-animation: fadeinBottom 4400ms;
-          animation: fadeinBottom 4400ms;
+  animation: fadeinBottom 4400ms;
 }
 
 .fondu12 {
   -webkit-animation: fadeinBottom 4800ms;
-          animation: fadeinBottom 4800ms;
+  animation: fadeinBottom 4800ms;
 }
 
 .fondu13 {
   -webkit-animation: fadeinBottom 5200ms;
-          animation: fadeinBottom 5200ms;
+  animation: fadeinBottom 5200ms;
 }
 
 @-webkit-keyframes fadeinBottom {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -89,10 +91,12 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .loader {
   margin: auto 0;
   width: 100%;
@@ -105,11 +109,11 @@ body {
   opacity: 0.9;
   z-index: 5;
   -webkit-animation: loader;
-          animation: loader;
+  animation: loader;
   -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .loader__bordure::before,
@@ -127,7 +131,7 @@ body {
   bottom: 10px;
   border-top-color: #FF79DA;
   -webkit-animation: rotation 3s linear infinite;
-          animation: rotation 3s linear infinite;
+  animation: rotation 3s linear infinite;
 }
 
 .loader__bordure::after {
@@ -137,7 +141,7 @@ body {
   bottom: 25px;
   border-top-color: #99E2D0;
   -webkit-animation: rotation 1.5s linear infinite;
-          animation: rotation 1.5s linear infinite;
+  animation: rotation 1.5s linear infinite;
 }
 
 .loader__bordure {
@@ -149,13 +153,14 @@ body {
   border: 7px solid transparent;
   border-top-color: #9356DC;
   -webkit-animation: rotation 1s linear infinite;
-          animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
 }
 
 @-webkit-keyframes rotation {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -165,30 +170,36 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes loader {
   0% {
     opacity: 1;
     visibility: visible;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
+
 @keyframes loader {
   0% {
     opacity: 1;
     visibility: visible;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
+
 h1 {
   font-family: Shrikhand;
 }
@@ -208,6 +219,7 @@ button {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   margin: 32px;
 }
+
 button:hover {
   background: linear-gradient(176deg, #ffc6ef 0%, #bc95e9 100%);
 }
@@ -218,6 +230,7 @@ header {
   margin: 0;
   padding: 0;
 }
+
 header .headerImg {
   width: auto;
   text-align: center;
@@ -228,9 +241,11 @@ header .headerImg {
   padding: 16px 0 16px 0;
   position: relative;
 }
+
 header .headerImg h1 {
   margin: 0;
 }
+
 header .headerLoc {
   width: auto;
   margin: 0;
@@ -241,9 +256,11 @@ header .headerLoc {
   z-index: 0;
   padding: 16px;
 }
+
 header .headerLoc i {
   margin-right: 8px;
 }
+
 header .headerExp {
   width: auto;
   display: flex;
@@ -254,6 +271,7 @@ header .headerExp {
   padding: 24px;
   background-color: #F6F6F6;
 }
+
 header .headerExp p {
   font-size: 18px;
 }
@@ -262,9 +280,11 @@ header .headerExp p {
   width: 100%;
   margin: 48px 0 48px 0;
 }
+
 .fonctionnement h2 {
   margin-left: 16px;
 }
+
 .fonctionnement ul {
   width: auto;
   margin: 0;
@@ -272,6 +292,7 @@ header .headerExp p {
   flex-direction: row;
   justify-content: space-around;
 }
+
 .fonctionnement li {
   display: flex;
   flex-direction: row;
@@ -280,6 +301,7 @@ header .headerExp p {
   align-items: center;
   width: 30%;
 }
+
 .fonctionnement li span {
   z-index: 3;
   position: absolute;
@@ -295,6 +317,7 @@ header .headerExp p {
   margin-left: -8px;
   overflow: visible;
 }
+
 .fonctionnement li .etiquetteFonctionnement {
   position: relative;
   background-color: #F6F6F6;
@@ -303,15 +326,22 @@ header .headerExp p {
   width: 90%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   margin-left: 8px;
-  text-overflow: hidden;
+
   text-overflow: ellipsis;
 }
+
+.fonctionnement li .etiquetteFonctionnement i {
+  color: gray;
+}
+
 .fonctionnement li .etiquetteFonctionnement:hover {
   background-color: #f2eafb;
 }
+
 .fonctionnement li .etiquetteFonctionnement:hover i {
   color: #9356DC;
 }
+
 .fonctionnement li .etiquetteFonctionnement i {
   margin: 8px 8px 8px 16px;
 }
@@ -322,9 +352,11 @@ header .headerExp p {
   width: auto;
   margin: 0;
 }
+
 .restaurant h2 {
   margin-left: 16px;
 }
+
 .restaurant .conteneurFicheRestaurant {
   display: flex;
   flex-direction: row;
@@ -334,6 +366,7 @@ header .headerExp p {
   margin: 8px;
   gap: 8px;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant {
   border: 0px;
   background-color: #ffffff;
@@ -347,32 +380,43 @@ header .headerExp p {
   position: relative;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .fa-stack {
   margin-top: -48px;
   position: absolute;
   right: 1%;
   bottom: 5%;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .fa-stack .vide {
   color: #000000;
   opacity: 1;
   transition: opacity 400ms;
+  z-index: 4;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .fa-stack .vide:hover {
   opacity: 0;
+  z-index: 3;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .fa-stack .plein {
   cursor: pointer;
   color: #ffffff;
   transition: color 400ms;
+  z-index: 3;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .fa-stack .plein:hover {
   color: #FF79DA;
+  z-index: 4;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant a {
   text-decoration: none;
   color: #000000;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .nouveau {
   background-color: #99E2D0;
   position: absolute;
@@ -383,15 +427,17 @@ header .headerExp p {
   right: 5%;
   border-radius: 4px;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant img {
   /*height: 230px;*/
   height: 190px;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: -60px;
   position: relative;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre {
   margin-top: -48px;
   display: flex;
@@ -399,14 +445,17 @@ header .headerExp p {
   justify-content: space-between;
   align-items: center;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre h3,
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre h4 {
   font-weight: normal;
 }
+
 .restaurant .conteneurFicheRestaurant .ficheRestaurant .sousTitre .nomRestaurant {
   display: flex;
   flex-direction: column;
@@ -422,6 +471,7 @@ header .headerExp p {
   display: flex;
   flex-direction: column;
 }
+
 .menuHeader .navMenu {
   display: flex;
   flex-direction: row;
@@ -433,25 +483,29 @@ header .headerExp p {
   padding: 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .menuHeader .navMenu h1 {
   width: calc(100% - 16px);
   text-align: center;
 }
+
 .menuHeader .navMenu .fa-arrow-left {
   font-size: 28px;
   margin-left: 16px;
   color: #000000;
   text-decoration: none;
 }
+
 .menuHeader .bannière {
   width: 100%;
   height: 250px;
 }
+
 .menuHeader .bannière img {
   height: 110%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   z-index: 0;
   bottom: 0px;
@@ -470,6 +524,7 @@ header .headerExp p {
   width: 100%;
   margin: -32px 0 0 0;
 }
+
 .menuSection .menuTitre {
   display: flex;
   flex-direction: row;
@@ -479,44 +534,54 @@ header .headerExp p {
   padding: 0 24px 0 24px;
   justify-content: space-between;
 }
+
 .menuSection .menuTitre h2 {
   font-family: Shrikhand;
   font-size: 24px;
   text-align: left;
 }
+
 .menuSection .menuTitre .fa-stack {
-  size: 24px;
+  /* size: 24px;*/
 }
+
 .menuSection .menuTitre .fa-stack .vide {
   color: #000000;
   opacity: 1;
   transition: opacity 400ms;
 }
+
 .menuSection .menuTitre .fa-stack .vide:hover {
   opacity: 0;
 }
+
 .menuSection .menuTitre .fa-stack .plein {
   cursor: pointer;
   color: #ffffff;
   transition: color 400ms;
 }
+
 .menuSection .menuTitre .fa-stack .plein:hover {
   color: #FF79DA;
 }
+
 .menuSection .menuCarte .sousMenuCarte {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix {
   width: 30%;
   justify-content: center;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix h3 {
   text-align: center;
   border-bottom: solid 4px #99E2D0;
   width: 100%;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox {
   background-color: #FFFFFF;
   border-radius: 20px;
@@ -527,6 +592,7 @@ header .headerExp p {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuPlat {
   width: calc(100% - 4rem);
   height: auto;
@@ -534,6 +600,7 @@ header .headerExp p {
   transition: width 600ms;
   text-overflow: ellipsis;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuPlat h4,
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuPlat p {
   overflow: hidden;
@@ -541,6 +608,7 @@ header .headerExp p {
   text-overflow: ellipsis;
   margin: 0;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuPrix {
   width: 4rem;
   overflow: hidden;
@@ -549,10 +617,12 @@ header .headerExp p {
   justify-content: end;
   padding: 12px 0 12px 0;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuPrix h4 {
   text-align: center;
   margin: 0;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuI {
   width: 4rem;
   margin-right: -4rem;
@@ -564,16 +634,20 @@ header .headerExp p {
   overflow: hidden;
   transition: margin-right 600ms;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox .menuI i {
   transform: rotate(0deg);
   transition: transform 600ms;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:hover .menuPlat {
   width: calc(100% - 8rem);
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:hover .menuI {
   margin-right: 0;
 }
+
 .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:hover .menuI i {
   transform: rotate(360deg);
 }
@@ -588,11 +662,13 @@ footer {
   justify-content: center;
   align-content: center;
 }
+
 footer h2 {
   text-align: center;
   font-family: Shrikhand;
   color: #FFFFFF;
 }
+
 footer ul {
   display: flex;
   flex-direction: row;
@@ -602,6 +678,7 @@ footer ul {
   margin: 0 0 48px 0;
   padding: 0;
 }
+
 footer ul li {
   color: #FFFFFF;
   list-style-type: none;
@@ -609,10 +686,12 @@ footer ul li {
   margin: 4px 0 4px 0;
   text-align: center;
 }
+
 footer ul li a {
   text-decoration: none;
   color: #FFFFFF;
 }
+
 footer ul li i {
   margin-right: 8px;
 }
@@ -621,58 +700,74 @@ footer ul li i {
   button:active {
     background: linear-gradient(176deg, #ffc6ef 0%, #bc95e9 100%);
   }
+
   .fonctionnement ul {
     flex-direction: column;
     margin: 0;
   }
+
   .fonctionnement ul li {
     width: 92%;
   }
+
   .fonctionnement ul li .etiquetteFonctionnement {
     margin: 0 16px 0 0;
     width: 100%;
   }
+
   .fonctionnement ul li .etiquetteFonctionnement:active {
     background-color: #f2eafb;
   }
+
   .fonctionnement ul li .etiquetteFonctionnement:active i {
     color: #9356DC;
   }
+
   .fa-stack .vide:active {
     opacity: 0;
   }
+
   .fa-stack .plein:active {
     color: #FF79DA;
   }
+
   .menuSection .menuCarte .sousMenuCarte {
     display: flex;
     flex-direction: column;
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix {
     width: 100%;
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix h3 {
     text-align: left;
     width: 48px;
     margin-left: 16px;
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox {
     width: calc(100% - 32px);
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuPlat {
     width: calc(100% - 8rem);
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuI {
     margin-right: 0;
   }
+
   .menuSection .menuCarte .sousMenuCarte .menuChoix .cheakBox:active .menuI i {
     transform: rotate(360deg);
   }
 }
+
 @media screen and (max-width: 768px) {
   .restaurant .conteneurFicheRestaurant .ficheRestaurant {
     width: 100%;
   }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -682,18 +777,23 @@ footer ul li i {
     margin: 0;
     height: auto;
   }
+
   footer h2 {
     text-align: left;
     margin-left: 16px;
   }
+
   footer ul {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: 16px;
   }
+
   footer ul li {
     width: 82%;
     text-align: left;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
